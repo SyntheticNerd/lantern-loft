@@ -10,7 +10,7 @@ body {
 }
 
 /* ---------------------Form Stuff--------------------------- */
-.form-box {
+/* .form-box {
     height: 100vh;
     width: 50%;
     display: flex;
@@ -28,22 +28,24 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .form {
+    font-size: 14px;
     align-items: center;
     width: 80%;
     position: relative;
-    height: 50px;
-    overflow: hidden;
+    height: auto;
     color: white;
+    top: 2px;
+    left: 10px;
 }
 
 .form input {
     width: 100%;
     height: 100%;
     color: #f1f2f5;
-    padding-top: 20px;
+    /* padding-top: 20px; */
     border: none;
     outline: none;
     background: transparent;
@@ -51,30 +53,26 @@ body {
 
 .form label {
     position: absolute;
-    bottom: 0px;
+    top: 0px;
     left: 0px;
     width: 100%;
     height: 100%;
     pointer-events: none;
-    border-bottom: 1px solid white;
 }
 
-.form label::after {
+/* .form label::after {
     content: "";
     position: absolute;
     bottom: -1px;
     left: 0px;
     height: 100%;
     width: 100%;
-    border-bottom: 3px solid #5fa8d3;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
-}
+} */
 
 .content-name {
     position: absolute;
-    bottom: 5px;
-    left: 0px;
     transition: all 0.3s ease;
 }
 
@@ -82,7 +80,7 @@ body {
 .form input:valid+.label-name .content-name {
     transform: translateY(-100%);
     font-size: 14px;
-    color: #5fa8d3;
+    opacity: 0;
 }
 
 .form input:focus+.label-name::after,
@@ -90,15 +88,10 @@ body {
     transform: translateX(0%);
 }
 
-
-
-
-
-
 /* ---------------------END Form Stuff--------------------------- */
 .npc-box {
     height: 100vh;
-    width: 50%;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
