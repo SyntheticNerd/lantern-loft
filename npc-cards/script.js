@@ -30,28 +30,31 @@
 
 // });
 
-function resetColor(arr) {
+function resetColor(arr, child, childColor) {
     for (let i = 0; i < arr.length; i++) {
         if (arr[i].style.backgroundColor) {
-            arr[i].style.backgroundColor = 'rgba(129, 58, 58, 0)';
+            arr[i].style.background = '';
         }
     }
+    child.style.background = childColor;
 }
+
+var color;
 
 function changeColorR(button, parent) {
     const buttons = parent.querySelectorAll('.skill-level');
-    resetColor(buttons);
-    button.style.background = '#813A3A';
+    color = button.style.backgroundColor;
+    color === 'rgb(129, 58, 58)' ? button.style.background = '' : resetColor(buttons, button, "rgb(129, 58, 58)");
 }
 
 function changeColorY(button, parent) {
     const buttons = parent.querySelectorAll('.skill-level');
-    resetColor(buttons);
-    button.style.background = '#BCA948';
+    color = button.style.backgroundColor;
+    color === 'rgb(188, 169, 72)' ? button.style.background = '' : resetColor(buttons, button, "rgb(188, 169, 72)");
 }
 
 function changeColorG(button, parent) {
     const buttons = parent.querySelectorAll('.skill-level');
-    resetColor(buttons);
-    button.style.background = '#61884E';
+    color = button.style.backgroundColor;
+    color === 'rgb(97, 136, 78)' ? button.style.background = '' : resetColor(buttons, button, "rgb(97, 136, 78)");
 }

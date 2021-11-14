@@ -9,6 +9,199 @@ body {
     background-color: #2D1D18
 }
 
+.npc-box {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.npc {
+    height: 300px;
+    width: 500px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%), #2C2D31;
+    display: flex;
+    color: rgba(255, 255, 255, 0.8);
+    transform: scale(2, 2);
+    box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.14), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 7px 8px rgba(0, 0, 0, 0.2);
+}
+
+.left-column {
+    margin: 8px;
+    height: 100%;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.portrait-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portrait {
+    width: 92px;
+    height: 99px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.portrait img {
+    width: 100%;
+    height: 100%;
+}
+
+.p-overview {
+    width: 100%;
+    height: 29px;
+    background: #333437;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.portrait-box p {
+    margin: 4px;
+    font-size: 9px;
+}
+
+.skills {
+    margin: 10px auto;
+    height: 140px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills p {
+    background-color: #333437;
+    width: 100%;
+    font-size: 9px;
+    text-align: center;
+}
+
+.skill-box {
+    margin: 1px auto 3px auto;
+    height: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-level {
+    margin: 1px auto;
+    height: 6px;
+    width: 6px;
+    border: none;
+    outline: 1px solid #616266;
+    display: flex;
+    cursor: pointer;
+    background: none;
+    background-clip: border-box;
+}
+
+.right-column {
+    margin: 8px 8px 8px 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name-box {
+    width: 100%;
+    height: 33px
+}
+
+.name {
+    height: 26px;
+    background-color: #333437;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.title {
+    height: 12px;
+    width: 187px;
+    background-color: #3D3D41;
+    position: relative;
+    bottom: 6px;
+    left: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main-description {
+    width: 95%;
+    height: 95px;
+    margin: 8px 0px;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.details-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.personality {
+    width: 50%;
+    height: 100%;
+    margin: 0px 1.5px 0px 0px;
+}
+
+.secret {
+    width: 50%;
+    height: 100%;
+    margin: 0px 0px 0px 1.5px;
+}
+
+.city-title {
+    font-size: 24px;
+    position: relative;
+    left: 12px;
+}
+
+.title-box {
+    background-color: #3D3D41;
+    width: 130px;
+    height: 16px;
+    position: relative;
+    left: 12px;
+    z-index: 1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.content-grid {
+    background-color: #333437;
+    height: 92%;
+    position: relative;
+    bottom: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 8px 8px 0px 8px;
+    font-size: 10px;
+    display: grid;
+    grid-template-columns: 8px auto;
+    align-items: center;
+}
+
+.content-grid p {
+    margin: 0px 0px 4px 4px;
+}
+
+.content-2 {
+    margin: 0px 1.5px 0px 0px;
+    background-color: #333437;
+    height: 94px;
+    position: relative;
+    bottom: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 /* ---------------------Form Stuff--------------------------- */
 /* .form-box {
     height: 100vh;
@@ -175,199 +368,3 @@ body {
 }
 
 /* ---------------------END Form Stuff--------------------------- */
-.npc-box {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.npc {
-    height: 300px;
-    width: 500px;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%), #2C2D31;
-    display: flex;
-    color: rgba(255, 255, 255, 0.8);
-    transform: scale(2, 2);
-    box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.14), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 7px 8px rgba(0, 0, 0, 0.2);
-}
-
-.left-column {
-    margin: 8px;
-    height: 100%;
-    width: 100px;
-    display: flex;
-    flex-direction: column;
-}
-
-.portrait-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.portrait {
-    width: 92px;
-    height: 99px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-.portrait img {
-    width: 100%;
-    height: 100%;
-}
-
-.p-overview {
-    width: 100%;
-    height: 29px;
-    background: #333437;
-    position: relative;
-    z-index: 1;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.portrait-box p {
-    margin: 4px;
-    font-size: 9px;
-}
-
-.skills {
-    margin: 10px auto;
-    height: 140px;
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-.skills p {
-    background-color: #333437;
-    width: 100%;
-    font-size: 9px;
-    text-align: center;
-}
-
-.skill-box {
-    margin: 1px auto 3px auto;
-    height: 20px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.skill-level {
-    margin: 1px auto;
-    height: 6px;
-    width: 6px;
-    border: none;
-    outline: 1px solid #616266;
-    display: flex;
-    cursor: pointer;
-    background-color: rgba(129, 58, 58, 0);
-    background-clip: border-box;
-}
-
-.right-column {
-    margin: 8px 8px 8px 0px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.name-box {
-    width: 100%;
-    height: 33px
-}
-
-.name {
-    height: 26px;
-    background-color: #333437;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.title {
-    height: 12px;
-    width: 187px;
-    background-color: #3D3D41;
-    position: relative;
-    bottom: 6px;
-    left: 8px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.main-description {
-    width: 95%;
-    height: 95px;
-    margin: 8px 0px;
-    font-size: 12px;
-    overflow: hidden;
-}
-
-.details-section {
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
-
-.personality {
-    width: 50%;
-    height: 100%;
-    margin: 0px 1.5px 0px 0px;
-}
-
-.secret {
-    width: 50%;
-    height: 100%;
-    margin: 0px 0px 0px 1.5px;
-}
-
-.city-title {
-    font-size: 24px;
-    position: relative;
-    left: 12px;
-}
-
-.title-box {
-    background-color: #3D3D41;
-    width: 130px;
-    height: 16px;
-    position: relative;
-    left: 12px;
-    z-index: 1;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.content-grid {
-    background-color: #333437;
-    height: 92%;
-    position: relative;
-    bottom: 4px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 8px 8px 0px 8px;
-    font-size: 10px;
-    display: grid;
-    grid-template-columns: 8px auto;
-    align-items: center;
-}
-
-.content-grid p {
-    margin: 0px 0px 4px 4px;
-}
-
-.content-2 {
-    margin: 0px 1.5px 0px 0px;
-    background-color: #333437;
-    height: 94px;
-    position: relative;
-    bottom: 4px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.skill-level.active {
-    background-color: #813A3A;
-}
