@@ -43,7 +43,7 @@ var color;
 
 function changeColorR(button, parent) {
     const buttons = parent.querySelectorAll('.skill-level');
-    color = button.style.backgroundColor;
+    color = button.style.background;
     color === 'rgb(129, 58, 58)' ? button.style.background = '' : resetColor(buttons, button, "rgb(129, 58, 58)");
 }
 
