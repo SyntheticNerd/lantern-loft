@@ -32,9 +32,7 @@
 
 function resetColor(arr, child, childColor) {
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i].style.backgroundColor) {
-            arr[i].style.background = '';
-        }
+        arr[i].style.background = '';
     }
     child.style.background = childColor;
 }
