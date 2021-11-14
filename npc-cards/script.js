@@ -29,7 +29,6 @@
 //     color = button.style.background = color === '#813A3A' ? 'rgba(129, 58, 58, 0)' : '#813A3A';
 
 // });
-var color;
 
 function resetColor(arr) {
     for (let i = 0; i < arr.length; i++) {
@@ -42,17 +41,17 @@ function resetColor(arr) {
 function changeColorR(button, parent) {
     const buttons = parent.querySelectorAll('.skill-level');
     resetColor(buttons);
-    color = button.style.background = color === '#813A3A' ? 'rgba(129, 58, 58, 0)' : '#813A3A';
+    button.style.background = '#813A3A';
 }
 
 function changeColorY(button, parent) {
     const buttons = parent.querySelectorAll('.skill-level');
     resetColor(buttons);
-    color = button.style.background = color === '#BCA948' ? 'rgba(129, 58, 58, 0)' : '#BCA948';
+    button.style.background = '#BCA948';
 }
 
 function changeColorG(button, parent) {
     const buttons = parent.querySelectorAll('.skill-level');
     resetColor(buttons);
-    color = button.style.background = color === '#61884E' ? 'rgba(129, 58, 58, 0)' : '#61884E'
+    button.style.background = '#61884E';
 }
