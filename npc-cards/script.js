@@ -56,3 +56,75 @@ function changeColorG(button, parent) {
     color = button.style.backgroundColor;
     color === 'rgb(97, 136, 78)' ? button.style.background = '' : resetColor(buttons, button, "rgb(97, 136, 78)");
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    var strtWdth1 = Number($('.npc').css('margin-left').replace('px', ''));
+    var strtHght1 = Number($('.npc').css('margin-top').replace('px', ''));
+
+    var strtWdth2 = Number($('.portrait-box').css('margin-left').replace('px', ''));
+    var strtHght2 = Number($('.portrait-box').css('margin-top').replace('px', ''));
+
+    $('body').on('mousemove', function (event) {
+        var x = event.clientX;
+        var y = event.clientY;
+
+        var retrayWidth = $(document).width() / 2;
+        var retrayHeight = $(document).height() / 2;
+
+        if (x > retrayWidth) {
+            x = (x - retrayWidth) * -1;
+        } else {
+            x = retrayWidth - x;
+        }
+
+        if (y > retrayHeight) {
+            y = (y - retrayHeight) * -1;
+        } else {
+            y = retrayHeight - y;
+        }
+
+        var transform0 = "translate(" + ((x / 60)) + "px, " + ((y / 60)) + "px)";
+        var transform1 = "translate(" + ((x / 200)) + "px, " + ((y / 200)) + "px)";
+        var transform2 = "translate(" + ((x / 80)) + "px, " + ((y / 80)) + "px)";
+
+
+
+        $('.npc').css({
+            'transform': transform0
+        });
+
+        $('.portrait-box').css({
+            'transform': transform1
+        });
+
+        $('.skills').css({
+            'transform': transform1
+        });
+
+        $('.name').css({
+            'transform': transform1
+        });
+
+        $('.content-grid').css({
+            'transform': transform1
+        });
+
+        $('.content-2').css({
+            'transform': transform1
+        })
+
+        $('.title').css({
+            'transform': transform2
+        })
+
+        $('.title-box').css({
+            'transform': transform2
+        })
+
+        $('.port-front').css({
+            'transform': transform2
+        })
+
+
+    });
+})
