@@ -57,6 +57,49 @@ function changeColorG(button, parent) {
     color === 'rgb(97, 136, 78)' ? button.style.background = '' : resetColor(buttons, button, "rgb(97, 136, 78)");
 }
 
+function resetDefaults() {
+    console.log("You are in the reset function")
+    $('.npc').css({
+        'transform': "scale(1.2, 1.2)",
+        'box-shadow': "0px 12px 8px rgba(0, 0, 0, 0.14)"
+    });
+
+    $('.portrait-box').css({
+        'transform': "none",
+        'box-shadow': "0px 4px 4px rgba(0, 0, 0, 0.25)"
+    });
+
+    $('.skills').css({
+        'transform': "none",
+        'box-shadow': "0px 4px 4px rgba(0, 0, 0, 0.25)"
+    });
+
+    $('.name').css({
+        'transform': "none",
+        'box-shadow': "0px 4px 4px rgba(0, 0, 0, 0.25)"
+    });
+
+    $('.content-grid').css({
+        'transform': "none",
+        'box-shadow': "0px 4px 4px rgba(0, 0, 0, 0.25)"
+    });
+
+    $('.content-2').css({
+        'transform': "none"
+    })
+
+    $('.title').css({
+        'transform': "none",
+        'box-shadow': "0px 4px 4px rgba(0, 0, 0, 0.25)"
+    })
+
+    $('.title-box').css({
+        'transform': "none",
+        'box-shadow': "0px 4px 4px rgba(0, 0, 0, 0.25)"
+    })
+}
+
+
 document.addEventListener('DOMContentLoaded', function () {
     var strtWdth1 = Number($('.npc').css('margin-left').replace('px', ''));
     var strtHght1 = Number($('.npc').css('margin-top').replace('px', ''));
@@ -64,67 +107,80 @@ document.addEventListener('DOMContentLoaded', function () {
     var strtWdth2 = Number($('.portrait-box').css('margin-left').replace('px', ''));
     var strtHght2 = Number($('.portrait-box').css('margin-top').replace('px', ''));
 
+
+
     $('body').on('mousemove', function (event) {
-        var x = event.clientX;
-        var y = event.clientY;
+        //if while the moouse is moving
+        if ($("#npc-card").is(":hover") != 0) {
+            // test to see if you are above the npc card
 
-        var retrayWidth = $(document).width() / 2;
-        var retrayHeight = $(document).height() / 2;
+            docHeight = $(document).height();
+            docWidth = $(document).width();
+            var x = Math.round(100 / docWidth * (event.clientX));
+            var y = Math.round(100 / docHeight * (event.clientY));
+            // rounding to a whole integer made the animations much smoother
 
-        if (x > retrayWidth) {
-            x = (x - retrayWidth) * -1;
+            x -= 50;
+            y -= 55;
+            // off set by 55 instead of 50 to account for the nav bar height
+            // center of the screen is at 50 50 we want center coordinates to be 0 0
+
+            var transform0 = "scale(1.2, 1.2) perspective(1000px) rotateX(" + (y) + "deg) rotateY(" + -(x) + "deg)";
+            var transform1 = "perspective(2000px) rotateX(" + Math.round(y * .2) + "deg) rotateY(" + -Math.round(x * .4) + "deg)";
+            var transform2 = "perspective(2000px) rotateX(" + Math.round(y * .1) + "deg) rotateY(" + -Math.round(x * .2) + "deg)";
+            var transform3 = "perspective(2000px) rotateX(" + Math.round(y * .9) + "deg) rotateY(" + -Math.round(x * .9) + "deg)";
+            // create aditional rates of perspective change by changing the multiplying decimal number
+            // notice the x is negative to reverse the direction of the perspective shift
+
+            var shadow0 = Math.round(x) + "px " + Math.round(y) + "px 8px rgba(0, 0, 0, 0.25)";
+            var shadow1 = Math.round(x) + "px " + Math.round(y) + "px 8px rgba(0, 0, 0, 0.25)";
+
+
+            $('.npc').css({
+                'transform': transform0,
+                'box-shadow': shadow0
+            });
+
+            $('.portrait-box').css({
+                'transform': transform1,
+                'box-shadow': shadow1
+            });
+
+            $('.port-front').css({
+                'transform': transform3
+            });
+
+            $('.skills').css({
+                'transform': transform1,
+                'box-shadow': shadow1
+            });
+
+            $('.name').css({
+                'transform': transform1,
+                'box-shadow': shadow1
+            });
+
+            $('.content-grid').css({
+                'transform': transform1,
+                'box-shadow': shadow1
+            });
+
+            $('.content-2').css({
+                'transform': transform1
+            })
+
+            $('.title').css({
+                'transform': transform2,
+                'box-shadow': shadow1
+            })
+
+            $('.title-box').css({
+                'transform': transform2,
+                'box-shadow': shadow1
+            })
         } else {
-            x = retrayWidth - x;
+            resetDefaults();
+            //i need to make it so the function pulls from the originall css
         }
-
-        if (y > retrayHeight) {
-            y = (y - retrayHeight) * -1;
-        } else {
-            y = retrayHeight - y;
-        }
-
-        var transform0 = "translate(" + ((x / 60)) + "px, " + ((y / 60)) + "px)";
-        var transform1 = "translate(" + ((x / 200)) + "px, " + ((y / 200)) + "px)";
-        var transform2 = "translate(" + ((x / 80)) + "px, " + ((y / 80)) + "px)";
-
-
-
-        $('.npc').css({
-            'transform': transform0
-        });
-
-        $('.portrait-box').css({
-            'transform': transform1
-        });
-
-        $('.skills').css({
-            'transform': transform1
-        });
-
-        $('.name').css({
-            'transform': transform1
-        });
-
-        $('.content-grid').css({
-            'transform': transform1
-        });
-
-        $('.content-2').css({
-            'transform': transform1
-        })
-
-        $('.title').css({
-            'transform': transform2
-        })
-
-        $('.title-box').css({
-            'transform': transform2
-        })
-
-        $('.port-front').css({
-            'transform': transform2
-        })
-
-
     });
 })

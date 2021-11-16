@@ -6,7 +6,77 @@
 
 body {
     display: flex;
-    background-color: #2D1D18
+    background-color: #2D1D18;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+    background-color: #101010;
+    color: white;
+    width: 100vw;
+    /* font-family: 'Poppins', sans-serif; */
+}
+
+.nav-links {
+    display: flex;
+    width: 20%;
+}
+
+.nav-links li {
+    list-style: none;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.nav-links a {
+    color: rgb(184, 184, 184);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.logo {
+    position: relative;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    opacity: 80%;
+}
+
+.logo-img {
+    background-color: #101010;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    height: 20vh;
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+    border-radius: 0% 0% 50% 50%;
+}
+
+.logo-img img {
+    height: 90%;
+    opacity: 80%;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(184, 184, 184);
+    margin: 5px;
+    transition: all 0.3s ease;
 }
 
 .npc-box {
@@ -27,9 +97,10 @@ body {
     box-shadow: 0px 12px 8px rgba(0, 0, 0, 0.14);
     margin-top: 0px;
     margin-left: 0px;
-    transform: translate(0px, 0px);
+    /* transform: translate(0px, 0px); */
     /* transform: translateX(20px);
     transform: translateY(20px); */
+    /* transform: perspective(500px) rotateY(10deg) rotateX(10deg); */
 }
 
 .left-column {
@@ -38,6 +109,7 @@ body {
     width: 100px;
     display: flex;
     flex-direction: column;
+    z-index: 1;
 }
 
 .portrait-box {
@@ -53,6 +125,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+
 
 }
 
