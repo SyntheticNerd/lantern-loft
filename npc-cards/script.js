@@ -69,6 +69,10 @@ function resetDefaults() {
         'box-shadow': "0px 4px 4px rgba(0, 0, 0, 0.25)"
     });
 
+    $('.port-front').css({
+        'transform': "none"
+    });
+
     $('.skills').css({
         'transform': "none",
         'box-shadow': "0px 4px 4px rgba(0, 0, 0, 0.25)"
